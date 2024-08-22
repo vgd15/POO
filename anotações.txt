@@ -1,0 +1,78 @@
+Conceito de POO:
+
+ É um paradigma de programação que organiza o código em torno de objetos e dados, ao invés de funções e lógica de
+  processamento. Os objetos representam entidades no mundo real, como pessoas, carros ou contas bancárias, 
+  e têm características (atributos) e comportamentos (métodos) associados a eles. O conceito chave da POO é 
+  a encapsulação, que permite esconder os detalhes internos de como um objeto funciona, expondo apenas uma interface 
+  para interagir com ele. Isso promove a reutilização de código, facilita a manutenção e torna o desenvolvimento de 
+  software mais modular e escalável. Outros princípios importantes da POO incluem herança, polimorfismo e abstração.
+
+princípios da poo:
+
+classe
+objeto
+herança
+polimorfismo
+encapsulamento
+
+COMO PEGAR DATA:
+
+let dataComConstrutor = new Date()
+let data1 = dataComConstrutor.getDate()
+console.log(data1) //31
+
+
+let dataFuncao = Date()
+let data2 = dataFuncao.getDate()
+ //TypeError: dataFuncao.getDate is not a function
+
+No exemplo acima, vemos que uma data gerada através da chamada da função Date() diretamente não pode acessar os 
+demais métodos do objeto Date, ao passo que ao gerarmos uma nova instância desse objeto é possível acessar todos os
+métodos definidos dentro deste objeto, como por exemplo getDate().
+
+Alguns exemplos de outros métodos disponíveis no objeto Date são:
+.getMillisseconds()
+.getSeconds()
+.getMinutes()
+.getHours()
+.getDay()
+.getMonth()
+.getFullYear()
+
+
+//Encapsulamento
+Propriedades privadas só podem ser acessadas de dentro da classe
+
+
+//polimorfismo
+
+
+Solid -> S Single responsibility principle - O significa open/closed principle, ou seja, o princípio do
+ aberto/fechado. É um nome meio esquisito, mas aberto e fechado nesse caso, significa que 
+ a classe tem que estar aberta para ser expandida, porém fechada, para ser modificada Ou seja, a ideia nesse caso, 
+ é que seja possível adicionar funcionalidades em uma classe, mas não alterar métodos de uma classe que 
+ já existem e que já estão em funcionamento ou alterar essas classes mesmo.
+
+Então, por exemplo, supondo que a classe user tem que retornar os dados de um usuário de uma forma diferente, porque 
+tem uma funcionalidade nova que precisa fazer um relatório. Então, não modificamos o método exibirInfos, que já 
+existe, adicionamos um novo método para atender essa nova demanda. Então, por exemplo, um método exibirRelatorio, 
+que vai mandar as informações para fora, do jeito que a funcionalidade nova está pedindo.
+
+
+-> L, de Liskov substitution principle, se temos uma subclasse e uma superclasse, ou seja, uma classe que herda da 
+outra, deveria ser possível sempre substituir uma pela outra, sem que nada deixe de funcionar. Como assim? Em 
+outras palavras, se uma classe tem um atributo, a subclasse dela também tem que ter. Se algo funciona na superclasse,
+ tem que funcionar na subclasse também. Ou seja, uma subclasse não pode fazer o que chamamos de quebrar contratos 
+ feitos pela superclasse. Ou seja, uma coisa que está estabelecida pela superclasse, não pode ser quebrada pela 
+ subclasse.
+
+ -> I interface segregation principle, Então, esse princípio diz que clientes não devem ser forçados 
+ a depender de interfaces que eles não usam. Vamos dar uma explicada, sem utilizar interfaces. Basicamente, 
+ esse princípio diz que não podemos impor uma implementação de uma coisa que não vai ser necessária. Por exemplo,
+  eu, Juliana, sou vegetariana, então minha classe Juliana não utilizaria métodos, por exemplo, que envolvam carne, 
+  todos os métodos que envolvem carne na classe Juliana são desnecessários.
+
+
+  -> D dependency inversion principle, que é o princípio da inversão de dependência. Ou seja, digamos que 
+  módulos que estão em um nível mais acima da hierarquia de classes, não podem depender de nada que 
+  está abaixo deles, e também diz que nenhum deles podem depender de implementações, e sim, de abstrações. 
